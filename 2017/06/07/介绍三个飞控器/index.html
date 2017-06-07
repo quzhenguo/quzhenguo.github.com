@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="uav," />
+  <meta name="keywords" content="ardupilot," />
 
 
 
@@ -93,17 +93,19 @@
 
 
 
-<meta name="description" content="航模遥控器根据操控方式不一样，分为美国手和日本手。">
-<meta name="keywords" content="uav">
+<meta name="description" content="1、APM 2.5 and 2.6详细资料：http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/  2、PX4FMU and PX4IOPX4FMU详细资料：http://copter.ardupilot.com/wiki/common-px4fmu-overview/PX4IO详细资料：http://copter.ardup">
+<meta name="keywords" content="ardupilot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="美国手 VS 日本手">
-<meta property="og:url" content="http://yoursite.com/2017/06/01/美国手 vs 日本手/index.html">
+<meta property="og:title" content="介绍三个飞控器(APM、PIX4、Pixhawk)">
+<meta property="og:url" content="http://yoursite.com/2017/06/07/介绍三个飞控器/index.html">
 <meta property="og:site_name" content="云装">
-<meta property="og:description" content="航模遥控器根据操控方式不一样，分为美国手和日本手。">
-<meta property="og:updated_time" content="2017-06-02T16:46:11.703Z">
+<meta property="og:description" content="1、APM 2.5 and 2.6详细资料：http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/  2、PX4FMU and PX4IOPX4FMU详细资料：http://copter.ardupilot.com/wiki/common-px4fmu-overview/PX4IO详细资料：http://copter.ardup">
+<meta property="og:image" content="http://yoursite.com/img/pix.jpg">
+<meta property="og:updated_time" content="2017-06-07T06:51:05.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美国手 VS 日本手">
-<meta name="twitter:description" content="航模遥控器根据操控方式不一样，分为美国手和日本手。">
+<meta name="twitter:title" content="介绍三个飞控器(APM、PIX4、Pixhawk)">
+<meta name="twitter:description" content="1、APM 2.5 and 2.6详细资料：http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/  2、PX4FMU and PX4IOPX4FMU详细资料：http://copter.ardupilot.com/wiki/common-px4fmu-overview/PX4IO详细资料：http://copter.ardup">
+<meta name="twitter:image" content="http://yoursite.com/img/pix.jpg">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/01/美国手 vs 日本手/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/07/介绍三个飞控器/"/>
 
 
 
 
 
-  <title>美国手 VS 日本手 | 云装</title>
+  <title>介绍三个飞控器(APM、PIX4、Pixhawk) | 云装</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,7 +259,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/01/美国手 vs 日本手/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/07/介绍三个飞控器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云装">
@@ -274,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">美国手 VS 日本手</h1>
+          <h1 class="post-title" itemprop="name headline">介绍三个飞控器(APM、PIX4、Pixhawk)</h1>
         
 
         <div class="post-meta">
@@ -286,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-01T23:23:29+08:00">
-                2017-06-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T14:33:37+08:00">
+                2017-06-07
               </time>
             
 
@@ -321,22 +323,29 @@
       
 
       
-        <hr>
-<p>航模遥控器根据操控方式不一样，分为美国手和日本手。<br> <a id="more"></a></p>
-<p>美国手也就是说左手摇杆负责油门和偏航，右手摇杆负责俯仰和横滚。左手摇杆上下为油门控制，左右是偏航控制；右手摇杆上下为俯仰控制，左右为横滚控制。</p>
-<p>对应的另外一种遥控为日本手。左手摇杆负责俯仰和偏航，右手摇杆负责油门和横滚。是不是很别扭？将俯仰和横滚的控制分离开这种设计太反人类了个人觉得，但是它就是这样一个标准没办法，日本人通常都会做些我们难以理解的事大家都知道的。</p>
-<p>为什么会有日本手和美国手呢？你到底是选择哪种遥控方式呢？下面这段有趣的文字摘自潘农菲（大疆副总裁）的《坚持不做手机操控！只因简单的两个字》。</p>
-<blockquote>
-<p>玩航模的朋友都知道美国手和日本手，美国手就是左手油门，右手前进后退，日本手不同（左手：上下控制飞行器的前进后退，左右控制左右旋转机头。右手：上下控制飞行器上升下降，左右控制飞行器左右平移)。</p>
-<p>有次，我和一个培训出很多世界冠军的香港飞手聊，为什么很多专业的飞手都是日本手？</p>
-<p>他回答，除了早年设备都是日本手这个原因外，还有一个原因：用并不惯用的左手控制前进后退，左手的天生弱项反而可以让飞手通过训练更加精细的操控，因此很多顶级高手使用这种方式。</p>
-<p>这让我想到多年前我学日本剑道时，问一名台湾五段，为什么要用相对没有力量的左手持剑，而更有力量的右手仅仅做辅助？</p>
-<p>他回答，右手是感情，左手是理智，剑是危险的事物，要用理智来操控。</p>
+        <h3 id="1、APM-2-5-and-2-6"><a href="#1、APM-2-5-and-2-6" class="headerlink" title="1、APM 2.5 and 2.6"></a>1、APM 2.5 and 2.6</h3><p>详细资料：<a href="http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/</a> </p>
+<h3 id="2、PX4FMU-and-PX4IO"><a href="#2、PX4FMU-and-PX4IO" class="headerlink" title="2、PX4FMU and PX4IO"></a>2、PX4FMU and PX4IO</h3><p>PX4FMU详细资料：<a href="http://copter.ardupilot.com/wiki/common-px4fmu-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-px4fmu-overview/</a><br>PX4IO详细资料：<a href="http://copter.ardupilot.com/wiki/common-px4io-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-px4io-overview/</a> </p>
+<h3 id="3、Pixhawk"><a href="#3、Pixhawk" class="headerlink" title="3、Pixhawk"></a>3、Pixhawk</h3><p>详细资料：<a href="http://copter.ardupilot.com/wiki/common-pixhawk-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-pixhawk-overview/</a> Pixhawk飞控器是PX4的升级版本（也就是二代产品），包含了很多增强功能。<br><a id="more"></a><br>目前（2016年），Pixhawk飞控器已经推出第三代了。硬件电路更加复杂，冗余做的越来越多。 APM久经考验，性能发挥到淋漓尽致。但APM采用8位单片机，CPU性能和内存非常有限。 PX4FMU/PX4IO由瑞士团队开发，采用32位浮点运算CPU，大内存，IO微控制器分布式处理。PX4 / Pixhawk系统拥有10倍于APM的性能和内存。 Pixhawk将作为DIYDrones团队下一代飞控器标准。Pixhawk具备下一代飞控器的所有特点，而且还有大量升级空间。 APM非常优秀，在当前配臵下可以很好的满足要求，但是很快就会不再生产。</p>
+<p>如果你现在手里已经有了Pixhawk飞控器，那么你就需要往里面下程序。一般购买回来，程序已经在里面了，不过如果你更新你的程序，那么你就要下载Arducopter固件。 固件：也就是飞控程序。 更新的版本，参考官方链接。 详细参考：<br><a href="http://diydrones.com/forum/topics/arducopter-3-1-released?xg_source=activity" target="_blank" rel="external">http://diydrones.com/forum/topics/arducopter-3-1-released?xg_source=activity</a><br><a href="https://github.com/diydrones/ardupilot/releases/tag/ArduCopter-3.1.0" target="_blank" rel="external">https://github.com/diydrones/ardupilot/releases/tag/ArduCopter-3.1.0</a> </p>
+<h3 id="3-1版固件特性："><a href="#3-1版固件特性：" class="headerlink" title="3.1版固件特性："></a>3.1版固件特性：</h3><ol>
+<li>Pixhawk support (Tridge &amp; PX4 development team)  支持Pixhawk </li>
+<li>Autotune of Roll and Pitch gains (Leonard/Randy)  Roll Pitch增益自动调节 </li>
+<li>Drift mode (Jason)  漂移模式 </li>
+<li>Improved Acro and new Sport mode (Leonard)  改进的Acro和运动模式 </li>
+<li>Arming, Take-off, Land in Loiter or AltHold  悬停模式起飞、高度保持 </li>
+<li>TradHeli improvements (Rob) including: <blockquote>
+<p>a) support for direct drive tail rotors  支持直接驱动尾旋翼<br>b) smoother ramp-up of main rotor  更流畅的主旋翼爬升性能<br>c) reduced collective for better control in stabilize mode (STAB_COL_MIN, STAB_COL_MAX params)  自稳模式 </p>
 </blockquote>
-<p>虽然有些玄虚，但是这句话我倒是记住了。</p>
-<p>多年后当我学无人机飞行操控时，这段话竟然做出了最精准的解释。</p>
-<hr>
-<embed src="//music.163.com/style/swf/widget.swf?sid=29452826&type=1&auto=1&width=310&height=90" width="330" height="110" allownetworking="all">
+</li>
+<li>Support for SingleCopter (Bill King)  支持单旋翼 </li>
+<li>Performance improvements resolve AltHold troubles for Hexa &amp; Octacopters  8\16旋翼悬停性能提升 </li>
+<li>Safety Improvements: <blockquote>
+<p>a) GPS Glitch detection (Randy)  全球定位系统干扰检测<br>b) Motors spin when armed (Jonathan Challinger)<br>c) Crash detector shuts off motors if copter flipped for 2secs  坠机检测，翻转2秒关闭发动机。<br>d) batt failsafe option to RTL instead of LAND, gps failsafe option to trigger AltHold instead of Land<br>e) more pre-arm checks of inertial nav speed.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="Pixhawk接线"><a href="#Pixhawk接线" class="headerlink" title="Pixhawk接线"></a>Pixhawk接线</h3><p><img src="/img/pix.jpg"></p>
+
       
     </div>
 
@@ -365,7 +374,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/uav/" rel="tag"># uav</a>
+            <a href="/tags/ardupilot/" rel="tag"># ardupilot</a>
           
         </div>
       
@@ -378,15 +387,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/04/20170604/" rel="next" title="什么是通用航空">
+                <i class="fa fa-chevron-left"></i> 什么是通用航空
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/04/20170604/" rel="prev" title="什么是通用航空">
-                什么是通用航空 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -433,8 +442,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -507,6 +525,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、APM-2-5-and-2-6"><span class="nav-number">1.</span> <span class="nav-text">1、APM 2.5 and 2.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、PX4FMU-and-PX4IO"><span class="nav-number">2.</span> <span class="nav-text">2、PX4FMU and PX4IO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、Pixhawk"><span class="nav-number">3.</span> <span class="nav-text">3、Pixhawk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1版固件特性："><span class="nav-number">4.</span> <span class="nav-text">3.1版固件特性：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pixhawk接线"><span class="nav-number">5.</span> <span class="nav-text">Pixhawk接线</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
