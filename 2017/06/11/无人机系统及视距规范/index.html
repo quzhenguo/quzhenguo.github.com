@@ -93,19 +93,17 @@
 
 
 
-<meta name="description" content="1、APM 2.5 and 2.6详细资料：http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/  2、PX4FMU and PX4IOPX4FMU详细资料：http://copter.ardupilot.com/wiki/common-px4fmu-overview/PX4IO详细资料：http://copter.ardup">
+<meta name="description" content="无人机系统（UAS）也称无人驾驶航空器系统（PPAS），是指一架无人机，相关的遥控站，所需的指挥与管制链路以及批准的型号设计规定的任何其他不见组成的系统。无人机感知与规避系统，指无人机机载安装的一种设备，用以确保无人机与其他航空器保持一定的安全飞行间隔，相当于载人航空器的防撞系统。（在融合空域中运行的大型无人机必须安装此种系统。）">
 <meta name="keywords" content="ardupilot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="介绍三个飞控器(APM、PIX4、Pixhawk)">
-<meta property="og:url" content="http://yoursite.com/2017/06/07/介绍三个飞控器/index.html">
+<meta property="og:title" content="无人机系统及视距规范">
+<meta property="og:url" content="http://yoursite.com/2017/06/11/无人机系统及视距规范/index.html">
 <meta property="og:site_name" content="云装">
-<meta property="og:description" content="1、APM 2.5 and 2.6详细资料：http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/  2、PX4FMU and PX4IOPX4FMU详细资料：http://copter.ardupilot.com/wiki/common-px4fmu-overview/PX4IO详细资料：http://copter.ardup">
-<meta property="og:image" content="http://yoursite.com/img/pix.jpg">
-<meta property="og:updated_time" content="2017-06-07T06:51:05.626Z">
+<meta property="og:description" content="无人机系统（UAS）也称无人驾驶航空器系统（PPAS），是指一架无人机，相关的遥控站，所需的指挥与管制链路以及批准的型号设计规定的任何其他不见组成的系统。无人机感知与规避系统，指无人机机载安装的一种设备，用以确保无人机与其他航空器保持一定的安全飞行间隔，相当于载人航空器的防撞系统。（在融合空域中运行的大型无人机必须安装此种系统。）">
+<meta property="og:updated_time" content="2017-06-11T09:02:28.562Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="介绍三个飞控器(APM、PIX4、Pixhawk)">
-<meta name="twitter:description" content="1、APM 2.5 and 2.6详细资料：http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/  2、PX4FMU and PX4IOPX4FMU详细资料：http://copter.ardupilot.com/wiki/common-px4fmu-overview/PX4IO详细资料：http://copter.ardup">
-<meta name="twitter:image" content="http://yoursite.com/img/pix.jpg">
+<meta name="twitter:title" content="无人机系统及视距规范">
+<meta name="twitter:description" content="无人机系统（UAS）也称无人驾驶航空器系统（PPAS），是指一架无人机，相关的遥控站，所需的指挥与管制链路以及批准的型号设计规定的任何其他不见组成的系统。无人机感知与规避系统，指无人机机载安装的一种设备，用以确保无人机与其他航空器保持一定的安全飞行间隔，相当于载人航空器的防撞系统。（在融合空域中运行的大型无人机必须安装此种系统。）">
 
 
 
@@ -133,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/07/介绍三个飞控器/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/11/无人机系统及视距规范/"/>
 
 
 
 
 
-  <title>介绍三个飞控器(APM、PIX4、Pixhawk) | 云装</title>
+  <title>无人机系统及视距规范 | 云装</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +257,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/07/介绍三个飞控器/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/11/无人机系统及视距规范/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云装">
@@ -276,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">介绍三个飞控器(APM、PIX4、Pixhawk)</h1>
+          <h1 class="post-title" itemprop="name headline">无人机系统及视距规范</h1>
         
 
         <div class="post-meta">
@@ -288,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T14:33:37+08:00">
-                2017-06-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-11T17:01:02+08:00">
+                2017-06-11
               </time>
             
 
@@ -323,28 +321,15 @@
       
 
       
-        <h3 id="1、APM-2-5-and-2-6"><a href="#1、APM-2-5-and-2-6" class="headerlink" title="1、APM 2.5 and 2.6"></a>1、APM 2.5 and 2.6</h3><p>详细资料：<a href="http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-apm25-and-26-overview/</a> </p>
-<h3 id="2、PX4FMU-and-PX4IO"><a href="#2、PX4FMU-and-PX4IO" class="headerlink" title="2、PX4FMU and PX4IO"></a>2、PX4FMU and PX4IO</h3><p>PX4FMU详细资料：<a href="http://copter.ardupilot.com/wiki/common-px4fmu-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-px4fmu-overview/</a><br>PX4IO详细资料：<a href="http://copter.ardupilot.com/wiki/common-px4io-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-px4io-overview/</a> </p>
-<h3 id="3、Pixhawk"><a href="#3、Pixhawk" class="headerlink" title="3、Pixhawk"></a>3、Pixhawk</h3><p>详细资料：<a href="http://copter.ardupilot.com/wiki/common-pixhawk-overview/" target="_blank" rel="external">http://copter.ardupilot.com/wiki/common-pixhawk-overview/</a> Pixhawk飞控器是PX4的升级版本（也就是二代产品），包含了很多增强功能。<br><a id="more"></a><br>目前（2016年），Pixhawk飞控器已经推出第三代了。硬件电路更加复杂，冗余做的越来越多。 APM久经考验，性能发挥到淋漓尽致。但APM采用8位单片机，CPU性能和内存非常有限。 PX4FMU/PX4IO由瑞士团队开发，采用32位浮点运算CPU，大内存，IO微控制器分布式处理。PX4 / Pixhawk系统拥有10倍于APM的性能和内存。 Pixhawk将作为DIYDrones团队下一代飞控器标准。Pixhawk具备下一代飞控器的所有特点，而且还有大量升级空间。 APM非常优秀，在当前配臵下可以很好的满足要求，但是很快就会不再生产。</p>
-<p>如果你现在手里已经有了Pixhawk飞控器，那么你就需要往里面下程序。一般购买回来，程序已经在里面了，不过如果你更新你的程序，那么你就要下载Arducopter固件。 固件：也就是飞控程序。 更新的版本，参考官方链接。 详细参考：<br><a href="http://diydrones.com/forum/topics/arducopter-3-1-released?xg_source=activity" target="_blank" rel="external">http://diydrones.com/forum/topics/arducopter-3-1-released?xg_source=activity</a><br><a href="https://github.com/diydrones/ardupilot/releases/tag/ArduCopter-3.1.0" target="_blank" rel="external">https://github.com/diydrones/ardupilot/releases/tag/ArduCopter-3.1.0</a> </p>
-<h3 id="3-1版固件特性："><a href="#3-1版固件特性：" class="headerlink" title="3.1版固件特性："></a>3.1版固件特性：</h3><ol>
-<li>Pixhawk support (Tridge &amp; PX4 development team)  支持Pixhawk </li>
-<li>Autotune of Roll and Pitch gains (Leonard/Randy)  Roll Pitch增益自动调节 </li>
-<li>Drift mode (Jason)  漂移模式 </li>
-<li>Improved Acro and new Sport mode (Leonard)  改进的Acro和运动模式 </li>
-<li>Arming, Take-off, Land in Loiter or AltHold  悬停模式起飞、高度保持 </li>
-<li>TradHeli improvements (Rob) including: <blockquote>
-<p>a) support for direct drive tail rotors  支持直接驱动尾旋翼<br>b) smoother ramp-up of main rotor  更流畅的主旋翼爬升性能<br>c) reduced collective for better control in stabilize mode (STAB_COL_MIN, STAB_COL_MAX params)  自稳模式 </p>
-</blockquote>
-</li>
-<li>Support for SingleCopter (Bill King)  支持单旋翼 </li>
-<li>Performance improvements resolve AltHold troubles for Hexa &amp; Octacopters  8\16旋翼悬停性能提升 </li>
-<li>Safety Improvements: <blockquote>
-<p>a) GPS Glitch detection (Randy)  全球定位系统干扰检测<br>b) Motors spin when armed (Jonathan Challinger)<br>c) Crash detector shuts off motors if copter flipped for 2secs  坠机检测，翻转2秒关闭发动机。<br>d) batt failsafe option to RTL instead of LAND, gps failsafe option to trigger AltHold instead of Land<br>e) more pre-arm checks of inertial nav speed.</p>
-</blockquote>
-</li>
+        <p>无人机系统（UAS）也称无人驾驶航空器系统（PPAS），是指一架无人机，相关的遥控站，所需的指挥与管制链路以及批准的型号设计规定的任何其他不见组成的系统。<br>无人机感知与规避系统，指无人机机载安装的一种设备，用以确保无人机与其他航空器保持一定的安全飞行间隔，相当于载人航空器的防撞系统。（在融合空域中运行的大型无人机必须安装此种系统。）<br><a id="more"></a><br>视距内运行（VLOS）：无人机驾驶员或无人机观测员与无人机保持直接目视视觉接触的操作方式，航空器处于驾驶员或观测员目视视距内半径500米，相对高度低于120米的区域内。<br>超视距运行（EVLOS）：无人机在目视视距以外的运行。<br>融合空域：指既有无人机也有有其他载人航空器同时运行的空域。<br>隔离空域：指专门分配给无人机系统运行的空域，通过限制其他航空器的进入以规避碰撞风险。</p>
+<hr>
+<p>人口稠密区：指城镇，乡村，繁忙道路或大型露天集会场所等区域。<br>微型无人机：指空机质量小于等于7千克的无人机。<br>轻型无人机：指空机质量大于7千克，但小于等于116千克的无人机，且全马力平飞中，校定控诉小鱼100千米/小时（55海里/小时），升限小于3000米。<br>小型无人机：指空机质量小于等于5700千克的无人机，微型和轻型无人机除外。<br>大型无人机：指空机质量大于5700千克的无人机。</p>
+<p>下列情况下，无人机系统驾驶员自行负责，无须证照管理：</p>
+<ol>
+<li>在室内运行的无人机</li>
+<li>在视距内运行的微型无人机</li>
+<li>在人烟稀少，空旷的非人口稠密区进行试验的无人机</li>
 </ol>
-<h3 id="Pixhawk接线"><a href="#Pixhawk接线" class="headerlink" title="Pixhawk接线"></a>Pixhawk接线</h3><p><img src="/img/pix.jpg"></p>
 
       
     </div>
@@ -387,8 +372,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/04/20170604/" rel="next" title="什么是通用航空">
-                <i class="fa fa-chevron-left"></i> 什么是通用航空
+              <a href="/2017/06/07/介绍三个飞控器/" rel="next" title="介绍三个飞控器(APM、PIX4、Pixhawk)">
+                <i class="fa fa-chevron-left"></i> 介绍三个飞控器(APM、PIX4、Pixhawk)
               </a>
             
           </div>
@@ -396,10 +381,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/11/无人机系统及视距规范/" rel="prev" title="无人机系统及视距规范">
-                无人机系统及视距规范 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -446,17 +427,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -529,22 +501,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、APM-2-5-and-2-6"><span class="nav-number">1.</span> <span class="nav-text">1、APM 2.5 and 2.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、PX4FMU-and-PX4IO"><span class="nav-number">2.</span> <span class="nav-text">2、PX4FMU and PX4IO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、Pixhawk"><span class="nav-number">3.</span> <span class="nav-text">3、Pixhawk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1版固件特性："><span class="nav-number">4.</span> <span class="nav-text">3.1版固件特性：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pixhawk接线"><span class="nav-number">5.</span> <span class="nav-text">Pixhawk接线</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
