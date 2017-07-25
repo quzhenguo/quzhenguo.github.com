@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/25/Gmap-net绘制矩形/index.html">
 <meta property="og:site_name" content="云装">
 <meta property="og:description" content="Gmap.net鼠标拖动绘制矩形private GMapOverlay polygons = new GMapOverlay(“polygon”); //放置polygon的图层private GMapPolygon drawingPolygon = null; //正在画的polygonprivate List drawingPoints = new List(); //多边形的点集privat">
-<meta property="og:updated_time" content="2017-07-25T10:34:21.423Z">
+<meta property="og:updated_time" content="2017-07-25T10:37:46.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gmap.net绘制矩形">
 <meta name="twitter:description" content="Gmap.net鼠标拖动绘制矩形private GMapOverlay polygons = new GMapOverlay(“polygon”); //放置polygon的图层private GMapPolygon drawingPolygon = null; //正在画的polygonprivate List drawingPoints = new List(); //多边形的点集privat">
@@ -321,73 +321,85 @@
       
 
       
-        <h3 id="Gmap-net鼠标拖动绘制矩形"><a href="#Gmap-net鼠标拖动绘制矩形" class="headerlink" title="Gmap.net鼠标拖动绘制矩形"></a>Gmap.net鼠标拖动绘制矩形</h3><p>private GMapOverlay polygons = new GMapOverlay(“polygon”); //放置polygon的图层<br>private GMapPolygon drawingPolygon = null; //正在画的polygon<br>private List<pointlatlng> drawingPoints = new List<pointlatlng>(); //多边形的点集<br>private GMapPolygon currentPolygon;<br><a id="more"></a><br>        mapControl.Overlays.add(polygons);<br>      private void gMapControl1_Load(object sender, EventArgs e)<br>        {<br>            this.gMapControl1.CacheLocation = System.Windows.Forms.Application.StartupPath;<br>            this.gMapControl1.MapProvider = GMapProviders.BingHybridMap;<br>            this.gMapControl1.Manager.Mode = AccessMode.ServerAndCache;<br>            this.gMapControl1.MinZoom = 1;                                                     //最小比例<br>            this.gMapControl1.MaxZoom = 23;                                                    //最大比例<br>            this.gMapControl1.Zoom = 15;                                                       //当前比例<br>            this.gMapControl1.ShowCenter = true;                                              //不显示中心十字点<br>            this.gMapControl1.DragButton = System.Windows.Forms.MouseButtons.Right;             //右键拖拽地图<br>            this.gMapControl1.Position = new PointLatLng(-25.969562, 32.585789);</pointlatlng></pointlatlng></p>
-<pre><code>}
+        <h3 id="Gmap-net鼠标拖动绘制矩形"><a href="#Gmap-net鼠标拖动绘制矩形" class="headerlink" title="Gmap.net鼠标拖动绘制矩形"></a>Gmap.net鼠标拖动绘制矩形</h3><p>private GMapOverlay polygons = new GMapOverlay(“polygon”); //放置polygon的图层<br>private GMapPolygon drawingPolygon = null; //正在画的polygon<br>private List<pointlatlng> drawingPoints = new List<pointlatlng>(); //多边形的点集<br>private GMapPolygon currentPolygon;<br>mapControl.Overlays.add(polygons);<br><a id="more"></a></pointlatlng></pointlatlng></p>
+<pre><code>private void gMapControl1_Load(object sender, EventArgs e)
+  {
+      this.gMapControl1.CacheLocation = System.Windows.Forms.Application.StartupPath;
+      this.gMapControl1.MapProvider = GMapProviders.BingHybridMap;
+      this.gMapControl1.Manager.Mode = AccessMode.ServerAndCache;
+      this.gMapControl1.MinZoom = 1;                                                     //最小比例
+      this.gMapControl1.MaxZoom = 23;                                                    //最大比例
+      this.gMapControl1.Zoom = 15;                                                       //当前比例
+      this.gMapControl1.ShowCenter = true;                                              //不显示中心十字点
+      this.gMapControl1.DragButton = System.Windows.Forms.MouseButtons.Right;             //右键拖拽地图
+      this.gMapControl1.Position = new PointLatLng(-25.969562, 32.585789);
 
-private void gMapControl1_MouseDown(object sender, MouseEventArgs e)
-{
-    ifDown = true;
-    current = this.gMapControl1.FromLocalToLatLng(e.X, e.Y);
-    firstPoints = new PointLatLng(current.Lat, current.Lng);
+  }
 
-}
- private void gMapControl1_MouseUp(object sender, MouseEventArgs e)
-{
-    List&lt;PointLatLng&gt; points = new List&lt;PointLatLng&gt;();
-    ifDown = false;
-    current = this.gMapControl1.FromLocalToLatLng(e.X, e.Y);
-    secondPoints = new PointLatLng(current.Lat, current.Lng);
-    rd = new PointLatLng(secondPoints.Lat, firstPoints.Lng);
-    st = new PointLatLng(firstPoints.Lat, secondPoints.Lng);
-    points.Add(firstPoints);
-    points.Add(rd);
-    points.Add(secondPoints);
-    points.Add(st);
-    points.Add(firstPoints);
-    //points.Add(gMapControl1.FromLocalToLatLng(e.X, e.Y));
-    if (polygon == null)
-    {
-        polygon = new GMapPolygon(points, &quot;my polygon&quot;);
-        polygon.Fill = new SolidBrush(Color.FromArgb(5, Color.Red));
-        polygon.Stroke = new Pen(Color.Blue, 2);
-        polygon.IsHitTestVisible = true;
-        polyOverlay.Polygons.Add(polygon);
-    }
-    else
-    {
-        polygon.Points.Clear();
-        polygon.Points.AddRange(points);
-        if (polyOverlay.Polygons.Count == 0)
-        {
-            polyOverlay.Polygons.Add(polygon);
-        }
-        else
-        {
-            gMapControl1.UpdatePolygonLocalPosition(polygon);
-        }
-    }
-    if(polyOverlay.Markers!=null)
-    {
-        polyOverlay.Markers.Clear();
-    }
-    else
-    {
-    marker = new GMarkerGoogle(firstPoints, GMarkerGoogleType.arrow);
-    marker1 = new GMarkerGoogle(rd, GMarkerGoogleType.arrow);
-    marker2 = new GMarkerGoogle(secondPoints, GMarkerGoogleType.arrow);
-    marker3 = new GMarkerGoogle(st, GMarkerGoogleType.arrow);
-    marker.ToolTipText = string.Format(&quot;{0},{1}&quot;, firstPoints.Lat, firstPoints.Lng);
-    marker1.ToolTipText = string.Format(&quot;{0},{1}&quot;, rd.Lat, rd.Lng);
-    marker2.ToolTipText = string.Format(&quot;{0},{1}&quot;, secondPoints.Lat, secondPoints.Lng);
-    marker3.ToolTipText = string.Format(&quot;{0},{1}&quot;, st.Lat, st.Lng);
-    polyOverlay.Markers.Add(marker);
-    polyOverlay.Markers.Add(marker1);
-    polyOverlay.Markers.Add(marker2);
-    polyOverlay.Markers.Add(marker3);
-    }
- gMapControl1.Overlays.Add(polyOverlay);
+  private void gMapControl1_MouseDown(object sender, MouseEventArgs e)
+  {
+      ifDown = true;
+      current = this.gMapControl1.FromLocalToLatLng(e.X, e.Y);
+      firstPoints = new PointLatLng(current.Lat, current.Lng);
 
-}
+  }
+   private void gMapControl1_MouseUp(object sender, MouseEventArgs e)
+  {
+      List&lt;PointLatLng&gt; points = new List&lt;PointLatLng&gt;();
+      ifDown = false;
+      current = this.gMapControl1.FromLocalToLatLng(e.X, e.Y);
+      secondPoints = new PointLatLng(current.Lat, current.Lng);
+      rd = new PointLatLng(secondPoints.Lat, firstPoints.Lng);
+      st = new PointLatLng(firstPoints.Lat, secondPoints.Lng);
+      points.Add(firstPoints);
+      points.Add(rd);
+      points.Add(secondPoints);
+      points.Add(st);
+      points.Add(firstPoints);
+      //points.Add(gMapControl1.FromLocalToLatLng(e.X, e.Y));
+      if (polygon == null)
+      {
+          polygon = new GMapPolygon(points, &quot;my polygon&quot;);
+          polygon.Fill = new SolidBrush(Color.FromArgb(5, Color.Red));
+          polygon.Stroke = new Pen(Color.Blue, 2);
+          polygon.IsHitTestVisible = true;
+          polyOverlay.Polygons.Add(polygon);
+      }
+      else
+      {
+          polygon.Points.Clear();
+          polygon.Points.AddRange(points);
+          if (polyOverlay.Polygons.Count == 0)
+          {
+              polyOverlay.Polygons.Add(polygon);
+          }
+          else
+          {
+              gMapControl1.UpdatePolygonLocalPosition(polygon);
+          }
+      }
+      if(polyOverlay.Markers!=null)
+      {
+          polyOverlay.Markers.Clear();
+      }
+      else
+      {
+      marker = new GMarkerGoogle(firstPoints, GMarkerGoogleType.arrow);
+      marker1 = new GMarkerGoogle(rd, GMarkerGoogleType.arrow);
+      marker2 = new GMarkerGoogle(secondPoints, GMarkerGoogleType.arrow);
+      marker3 = new GMarkerGoogle(st, GMarkerGoogleType.arrow);
+      marker.ToolTipText = string.Format(&quot;{0},{1}&quot;, firstPoints.Lat, firstPoints.Lng);
+      marker1.ToolTipText = string.Format(&quot;{0},{1}&quot;, rd.Lat, rd.Lng);
+      marker2.ToolTipText = string.Format(&quot;{0},{1}&quot;, secondPoints.Lat, secondPoints.Lng);
+      marker3.ToolTipText = string.Format(&quot;{0},{1}&quot;, st.Lat, st.Lng);
+      polyOverlay.Markers.Add(marker);
+      polyOverlay.Markers.Add(marker1);
+      polyOverlay.Markers.Add(marker2);
+      polyOverlay.Markers.Add(marker3);
+      }
+   gMapControl1.Overlays.Add(polyOverlay);
+
+  }
 </code></pre>
       
     </div>
